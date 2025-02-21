@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", async function() {
         populateDropdown("cpu", data.cpu);
         populateDropdown("gpu", data.gpu);
         populateDropdown("os", data.os);
+        attachClearResultListeners();
     } catch (error) {
         console.error("Error loading dropdowns:", error);
         alert("Failed to load options. Please try again later.");
@@ -24,6 +25,14 @@ function populateDropdown(id, options) {
         opt.value = option;
         opt.innerText = option;
         select.appendChild(opt);
+    });
+}
+function attachClearResultListeners() {
+    const inputs = document.querySelectorAll("input, select");
+    inputs.forEach(input => {
+        input.addEventListener("input", function() {
+            document.getElementById("result").innerText = ""; // Clear the result
+        });
     });
 }
 

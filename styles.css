@@ -1,49 +1,97 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    text-align: center;
-}
-
-.container {
-    width: 50%;
-    margin: auto;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px gray;
-}
-
-h1 {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f7f9;
     color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
+/* Container */
+.container {
+    max-width: 500px;
+    background: white;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+h1 {
+    font-size: 26px;
+    color: #2c3e50;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+/* Form Labels */
 label {
     display: block;
-    margin-top: 10px;
-    font-weight: bold;
+    font-weight: 500;
+    margin-top: 12px;
+    text-align: left;
+    color: #555;
 }
 
+/* Inputs & Selects */
 select, input {
     width: 100%;
-    padding: 8px;
-    margin-top: 5px;
+    padding: 12px;
+    border: 2px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 16px;
+    background: #f8fafc;
+    transition: 0.3s;
 }
 
+select:hover, input:hover {
+    border-color: #3498db;
+}
+
+select:focus, input:focus {
+    border-color: #2980b9;
+    outline: none;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+}
+
+/* Button */
 button {
-    background-color: #28a745;
+    background: linear-gradient(90deg, #3498db, #2980b9);
     color: white;
-    padding: 10px;
-    margin-top: 15px;
+    padding: 14px;
+    width: 100%;
     border: none;
+    border-radius: 8px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 20px;
+    transition: 0.3s;
 }
 
 button:hover {
-    background-color: #218838;
+    background: linear-gradient(90deg, #2980b9, #2471a3);
+    transform: scale(1.05);
 }
 
+/* Result */
 h2 {
     margin-top: 20px;
-    color: #007bff;
+    color: #27ae60;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
 }
