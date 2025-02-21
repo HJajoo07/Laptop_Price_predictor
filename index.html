@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptop Price Predictor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Laptop Price Predictor</h1>
+        
+        <label for="brand">Brand:</label>
+        <select id="brand"></select>
+
+        <label for="type">Type:</label>
+        <select id="type"></select>
+
+        <label for="ram">RAM (GB):</label>
+        <select id="ram">
+            <option>2</option><option>4</option><option>6</option>
+            <option>8</option><option>12</option><option>16</option>
+            <option>24</option><option>32</option><option>64</option>
+        </select>
+
+        <label for="weight">Weight (kg):</label>
+        <input type="number" id="weight" step="0.1">
+
+        <label for="touchscreen">Touchscreen:</label>
+        <select id="touchscreen">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select>
+
+        <label for="ips">IPS Display:</label>
+        <select id="ips">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select>
+
+        <label for="screen_size">Screen Size (inches):</label>
+        <input type="number" id="screen_size" step="0.1">
+
+        <label for="resolution">Resolution:</label>
+        <select id="resolution">
+            <option>1920x1080</option>
+            <option>1366x768</option>
+            <option>1600x900</option>
+            <option>3840x2160</option>
+            <option>3200x1800</option>
+            <option>2880x1800</option>
+            <option>2560x1600</option>
+            <option>2560x1440</option>
+            <option>2304x1440</option>
+        </select>
+
+        <label for="cpu">CPU:</label>
+        <select id="cpu"></select>
+
+        <label for="hdd">HDD (GB):</label>
+        <select id="hdd">
+            <option>0</option><option>128</option><option>256</option>
+            <option>512</option><option>1024</option><option>2048</option>
+        </select>
+
+        <label for="ssd">SSD (GB):</label>
+        <select id="ssd">
+            <option>0</option><option>8</option><option>128</option>
+            <option>256</option><option>512</option><option>1024</option>
+        </select>
+
+        <label for="gpu">GPU:</label>
+        <select id="gpu"></select>
+
+        <label for="os">Operating System:</label>
+        <select id="os"></select>
+
+        <button onclick="predictPrice()">Predict Price</button>
+        <h2 id="result"></h2>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
